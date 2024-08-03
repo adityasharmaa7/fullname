@@ -7,11 +7,10 @@ function FullName() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setFullName(`${firstName} ${lastName}`);
-        setFirstName('');
-        setLastName('')
     }
   return (
     <div>
+        <h1>Full Name Display</h1>
         <form onSubmit={handleSubmit}>
             <p>FirstName: <input type="text" value={firstName} onChange={(e)=>setFirstName(e.target.value)} required/></p>
             <p>LastName: <input type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)} required/></p>
